@@ -1,0 +1,14 @@
+test_case=int(input())
+for i in range(test_case):
+    m_1=list(map(int,input().split(' ')))     #read the nos from input and typecast them to int using
+    m_2=list(map(int,input().split(' ')))
+    m_3=list(map(int,input().split(' ')))
+    lst=[m_1,m_2,m_3]
+    lst=sorted(lst)
+    if (lst[1][0]>=lst[0][0] and lst[1][1]>=lst[0][1] and lst[1][2]>=lst[0][2]) and (lst[1][0]>lst[0][0] or lst[1][1]>lst[0][1] or lst[1][2]>lst[0][2]):
+        if (lst[2][0]>=lst[1][0] and lst[2][1]>=lst[1][1] and lst[2][2]>=lst[1][2]) and (lst[2][0]>lst[1][0] or lst[2][1]>lst[1][1] or lst[2][2]>lst[1][2]):
+            print('yes')
+        else:
+            print('no')
+    else:
+        print('no')
